@@ -7,11 +7,6 @@ enum HttpMethod: String {
     case patch = "PATCH"
 }
 
-enum HttpResponse {
-    case success
-    case error
-}
-
 // MARK: Core API class
 
 final class APICore: APIProvider {
