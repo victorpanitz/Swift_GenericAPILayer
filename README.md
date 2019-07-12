@@ -25,7 +25,30 @@ api.request(url: urlPath, httpMethod: .get, body: nil) { (result: Result<Object,
 ```
 ## Feel free to customize it adding your own
 
-### Custom errors:
+### URL Paths (APIPaths.swift): 
+
+```Swift
+enum PathURL {
+    case base
+    case myPath
+    case variable(String)
+}
+
+extension PathURL: RawRepresentable {
+    public typealias RawValue = String
+    public init?(rawValue: RawValue) { switch rawValue { default: return nil } }
+    
+    public var rawValue: RawValue {
+        switch self {
+        case .base: return "http://myUrlBasePath.com/"
+        case .myPath: return "myPath/"
+        case .variable(let value): return value
+        }
+    }    
+}
+```
+
+### Custom errors (APICore.swift):
 
 ```Swift
 enum NetworkErrors: String {
@@ -35,7 +58,7 @@ enum NetworkErrors: String {
 }
 ```
 
-### Http methods: 
+### Http methods (APICore.swift): 
 
 ```Swift
 enum HttpMethod: String {
