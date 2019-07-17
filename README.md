@@ -9,7 +9,7 @@ A simple generic API layer implemented in Swift. Good solution to avoid external
 let api: APIProvider = APICore()
 ```
 
-- Easiy access the generic request method passing your parameters
+- Access the generic request method passing your parameters
 
 ```Swift 
 let urlPath: [PathURL] = [.base, .myPath, .variable("dynamicValue")]
