@@ -48,7 +48,7 @@ extension PathURL: RawRepresentable {
 }
 ```
 
-### Custom errors (APICore.swift):
+### Custom errors (APIError.swift):
 
 ```Swift
 enum NetworkErrors: String {
