@@ -17,7 +17,7 @@ let urlPath: [PathURL] = [.base, .myPath, .variable("dynamicValue")]
 api.request(url: urlPath, httpMethod: .get, body: nil) { (result: Result<Object, ErrorHandler>) in
     switch result {
     case .success(let value):
-    // handle value (as your custom Object)
+    // handle value (as your custom Object or [Object])
     case .failure(let error):
     // handle error.message (as String)
     }
